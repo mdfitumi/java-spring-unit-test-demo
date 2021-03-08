@@ -1,6 +1,9 @@
 package com.example.unittestdemo.demo;
 
+import com.example.unittestdemo.demo.UserRepository;
+
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.stereotype.Service;
 
 import java.util.Optional;
@@ -8,7 +11,7 @@ import java.util.Optional;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-    private UserRepository users;
+    UserRepository users;
 
     @Override
     public Optional<UserEntity> findUserByName(String name) {

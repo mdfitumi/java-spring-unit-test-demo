@@ -1,11 +1,19 @@
 package com.example.unittestdemo.demo;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 import java.util.Date;
 
 @Entity
+@Table(name = "users")
 public class UserEntity {
-    public Integer id;
-    public String name;
-    public Date createdAt;
+    @Id
+    @Column(name = "ID")
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column
+    private String name;
+
+    @Column
+    private Date createdAt;
 }
