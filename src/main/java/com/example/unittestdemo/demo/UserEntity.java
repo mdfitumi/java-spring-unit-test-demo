@@ -16,4 +16,14 @@ public class UserEntity {
 
     @Column
     private Date createdAt;
+
+    public UserEntity(Integer id, String name, Date createdAt) {
+        this.id = id;
+        this.name = name;
+        this.createdAt = createdAt;
+    }
+
+    public String getName() {
+        return this.name;
+    }
 }
