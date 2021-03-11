@@ -33,10 +33,10 @@ public class UserServiceTest {
 
     @Before
     public void setUp() {
-        UserEntity user = new UserEntity(1, "Jackson", new Date());
+        UserEntity jackson = new UserEntity(1, "Jackson", new Date());
 
-        Mockito.when(userRepository.findUserByName(user.getName()))
-                .thenReturn(Optional.of(user));
+        Mockito.when(userRepository.findUserByName(jackson.getName()))
+                .thenReturn(Optional.of(jackson));
     }
 
     @Test
