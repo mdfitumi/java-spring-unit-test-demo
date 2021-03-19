@@ -17,4 +17,9 @@ public class UserServiceImpl implements UserService {
     public Optional<UserEntity> findUserByName(String name) {
         return users.findUserByName(name);
     }
+
+    @Override
+    public void deleteUser(Integer userId) {
+        users.deleteById(userId);
+    }
 }

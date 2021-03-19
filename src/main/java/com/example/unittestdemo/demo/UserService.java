@@ -4,4 +4,5 @@ import java.util.Optional;
 
 public interface UserService {
     Optional<UserEntity> findUserByName(String name);
+    void deleteUser(Integer userId);
 }
